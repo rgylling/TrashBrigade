@@ -19,7 +19,7 @@ A user would want use our website to combine their vacation or retirement in Pue
 - [Home page](/wireframes/home-page.jpg)
 - [About page](/wireframes/about-page-01.jpg), [more of the about page](/wireframes/about-page-02.jpg)
 - [Xmas page](/wireframes/xmas-page.jpg)
-- [Contact page](/wireframes/contact-page)
+- [Contact page](/wireframes/contact-page.jpg)
 
 ## Links
 - [Trello](https://trello.com/b/E8SHU905/trash-brigade)
