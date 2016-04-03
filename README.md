@@ -6,7 +6,7 @@
 
 The purpose of this project is to create a website for a charity that supports local children in Puerto Vallarta, Mexico.
 
-A user would want use our website to combine their vacation or retirement in Puerto Vallarta with giving back to the community. They would benefit by making a positive difference in the lives of the children they support. The user would visit our website because currently the charity doesn't have a website.
+A user would want to use our website to combine their vacation or retirement in Puerto Vallarta with giving back to the community. They would benefit by making a positive difference in the lives of the children they support. The user would visit our website because currently the charity doesn't have a website.
 
 ## User Stories (MVP)
 - As a user, I want a website that's easy to navigate.
