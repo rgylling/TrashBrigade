@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  padding-top: 71px;
 }
 
 .h2, .h3, .h4, .h5, .h6,h2, h3, h4, h5, h6 {
@@ -10,4 +11,22 @@ body {
 
 .h1,h1 {
   font-family: 'Henny Penny', cursive;
+}
+
+.backgroundimg {
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundimg-1 {
+  background-image: url("https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/1498923_847227371972656_819043631503242694_o.jpg");
+  opacity: .7;
+}
+
+#TitleName {
+  font-size: 4em;
+  color: white;
 }
