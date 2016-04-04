@@ -16,6 +16,12 @@ A user would want to use our website to combine their vacation or retirement in 
 - As a developer, I want to keep my program DRY and limit the amount of lines of code.
 - As a developer, I want to use bootstrap to make my website responsive and more pleasing to the eye.
 
+## Diagrams
+
+![Domain model of contact form and photo gallery](/diagrams/domain-model-01.jpg "Domain Model of Contact Form and Photo Gallery")
+
+![Domain model of donation form](/diagrams/domain-model-02.jpg "Domain Model of Donation Form")
+
 ## Wireframes
 
 ![Wireframe of home page](/wireframes/home-page.jpg "Home Page")
