@@ -18,21 +18,23 @@ A user would want to use our website to combine their vacation or retirement in 
 
 ## Diagrams
 
-![Domain model of contact form and photo gallery](/diagrams/domain-model-01.jpg "Domain Model of Contact Form and Photo Gallery")
+![Domain model of contact form and photo gallery](/_diagrams/domain-model-01.jpg "Domain Model of Contact Form and Photo Gallery")
 
-![Domain model of donation form](/diagrams/domain-model-02.jpg "Domain Model of Donation Form")
+![Domain model of donation form](/_diagrams/domain-model-02.jpg "Domain Model of Donation Form")
 
 ## Wireframes
 
-![Wireframe of home page](/wireframes/home-page.jpg "Home Page")
+![Wireframe of home page](/_wireframes/home-page.jpg "Home Page")
 
-![Wireframe of about page](/wireframes/about-page-01.jpg "About Page")
+![Wireframe of about page](/_wireframes/about-page-01.jpg "About Page")
 
-![More of the about page wireframe](/wireframes/about-page-02.jpg "More of the About Page")
+![More of the about page wireframe](/_wireframes/about-page-02.jpg "More of the About Page")
 
-![Wireframe of Xmas page](/wireframes/xmas-page.jpg "Xmas Page")
+![Wireframe of Christmas page](/_wireframes/christmas-page.jpg "Christmas Page")
 
-![Wireframe of contact page](/wireframes/contact-page.jpg "Contact Page")
+![Wireframe of Get Involved page](/_wireframes/get-involved-page.jpg "Get Involved Page")
+
+![Wireframe of contact page](/_wireframes/contact-page.jpg "Contact Page")
 
 ## Links
 
