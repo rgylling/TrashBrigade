@@ -1,14 +1,14 @@
 # Trash Brigade
 
-<strong>Team Name</strong>: The Trashies
+<b>Team Name</b>: The Trashies
 
-<strong>Team Members</strong>: [Yvonne Hayes](https://github.com/YvonneHayes), [Randy Gylling](https://github.com/rgylling), [Johnny Luangphasy](https://github.com/jluangphasy)
+<b>Team Members</b>: [Yvonne Hayes](https://github.com/YvonneHayes), [Randy Gylling](https://github.com/rgylling), [Johnny Luangphasy](https://github.com/jluangphasy)
 
 The purpose of this project is to create a website for a charity that supports local children in Puerto Vallarta, Mexico.
 
 A user would want to use our website to combine their vacation or retirement in Puerto Vallarta with giving back to the community. They would benefit by making a positive difference in the lives of the children they support. The user would visit our website because currently the charity doesn't have a website.
 
-## User Stories (MVP)
+## Stories
 - As a user, I want a website that's easy to navigate.
 - As a user, I want to easily understand what the charity vision is.
 - As a user, I want to find out how I can contribute.
