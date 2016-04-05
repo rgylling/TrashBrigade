@@ -9,33 +9,43 @@ backgroundImg: 5
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <form action="/contact.html" method="post">
+      <form id="formContact" action="/contact.html" method="post">
         <div class="row">
           <div class="col-sm-6">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName">
+            <label for="inputFirstName">First Name</label>
+            <input type="text" class="form-control" id="inputFirstName" name="inputFirstName" autocomplete="off">
+            <p class="hide">The first name is required.</p>
           </div>
           <div class="col-sm-6">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName">
+            <label for="inputLastName">Last Name</label>
+            <input type="text" class="form-control" id="inputLastName" name="inputLastName" autocomplete="off">
+            <p class="hide">The last name is required.</p>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email">
+            <label for="inputEmail">Email</label>
+            <input type="text" class="form-control" id="inputEmail" name="inputEmail" autocomplete="off">
+            <p class="hide">The email is required.</p>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <label for="subject">Subject</label>
-            <input type="text" class="form-control" id="subject">
+            <label for="inputSubject">Subject</label>
+            <input type="text" class="form-control" id="inputSubject" name="inputSubject" autocomplete="off">
+            <p class="hide">The subject is required.</p>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="6"></textarea>
+            <label for="textareaMessage">Message</label>
+            <textarea class="form-control" id="textareaMessage" name="textareaMessage" rows="6" autocomplete="off"></textarea>
+            <p class="hide">The message is required.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <input class="btn btn-primary" type="submit" name="submit" value="Send">
           </div>
         </div>
       </form>
