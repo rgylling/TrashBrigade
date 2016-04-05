@@ -1,5 +1,5 @@
-var dd = 2;
-var cnt = 0;
+var dd = 3;
+var cnt = -1;
 function chng() {
 
   $(".fadeThis").fadeTo(10,0);
@@ -22,21 +22,21 @@ function chng() {
     var imageDir = '../img/kids/';     // change to match images folder
     var imageDir2 = '../img/xmas/';
 
-    var images1 = ['Kids11.jpg','Kids12.jpg'];
-    var images2 = ['Kids13.jpg','Kids16.jpg']
-    var images3 = ['Kids07.jpg','Kids09.jpg']
-    var images4 = ['Kids10.jpg','Kids14.jpg']
-    var images5 = ['Kids15.jpg','Kids18.jpg']
-    var images6 = ['Kids17.jpg','Kids19.jpg']
-    var images7 = ['Kids20.jpg','Kids21.jpg']
+    var images1 = ['Kids11.jpg','Kids12.jpg','Kids01.jpg'];
+    var images2 = ['Kids13.jpg','Kids16.jpg','Kids04.jpg']
+    var images3 = ['Kids07.jpg','Kids09.jpg','Kids02.jpg']
+    var images4 = ['Kids10.jpg','Kids14.jpg','Kids03.jpg']
+    var images5 = ['Kids15.jpg','Kids18.jpg','Kids05.jpg']
+    var images6 = ['Kids17.jpg','Kids19.jpg','Kids06.jpg']
+    var images7 = ['Kids20.jpg','Kids21.jpg','Kids08.jpg']
 
-    var xmasOne = ['XMas10.jpg', 'XMas12.jpg'];
-    var xmasTwo = ['XMas13.jpg','XMas14.jpg']
-    var xmasThree = ['XMas07.jpg','XMas08.jpg']
-    var xmasFour = ['XMas11.jpg','XMas16.jpg']
-    var xmasFive = ['XMas18.jpg','XMas21.jpg']
-    var xmasSix = ['XMas15.jpg','XMas17.jpg']
-    var xmasSeven = ['XMas19.jpg','XMas20.jpg']
+    var xmasOne = ['XMas10.jpg','XMas12.jpg','XMas02.jpg'];
+    var xmasTwo = ['XMas13.jpg','XMas14.jpg','XMas03.jpg']
+    var xmasThree = ['XMas07.jpg','XMas08.jpg','XMas01.jpg']
+    var xmasFour = ['XMas11.jpg','XMas16.jpg','XMas04.jpg']
+    var xmasFive = ['XMas18.jpg','XMas21.jpg','XMas05.jpg']
+    var xmasSix = ['XMas15.jpg','XMas17.jpg','XMas06.jpg']
+    var xmasSeven = ['XMas19.jpg','XMas20.jpg','XMas09.jpg']
 
     cnt++;
 
@@ -81,7 +81,7 @@ function chng() {
         xmas7.src = imageDir2 + xmasSeven[0];
       };
         cnt = 0;
-      }
+    }
 
 }
 
