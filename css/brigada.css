@@ -1,11 +1,10 @@
 
-
 body {
   font-family: 'Open Sans', sans-serif;
-  padding-top: 50px;
+  padding-top: 51px;
 }
 
-.h2, .h3, .h4, .h5, .h6,h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: 'Bubblegum Sans', cursive;
 }
 
@@ -19,18 +18,6 @@ body {
 }
 
 .navbar-brand {
-  padding: 0 15px 0 15px;
-}
-
-.navbar-header {
-  height:50px;
-}
-
-nav {
-  max-height:50px;
-}
-
-.h1, h1 {
   font-family: 'Henny Penny', cursive;
 }
 
@@ -43,9 +30,9 @@ nav {
   position: relative;
 }
 
-.backgroundimg-1 {
+/*.backgroundimg-1 {
   background-image: url("https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/1498923_847227371972656_819043631503242694_o.jpg");
-}
+}*/
 
 .backgroundimg-overlay {
   position: absolute;

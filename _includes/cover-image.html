@@ -1,9 +1,9 @@
-<div class="backgroundimg backgroundimg-1">
+<div class="backgroundimg backgroundimg-{{ page.backgroundImg }}">
   <div class="cover-image-content">
     <div class="container">
       <div class="row">
         <div class="col-xs-8 col-xs-offset-2 text-center">
-          <h2 id="TitleName">{{ page.heading }}</h2>
+          <h1 id="TitleName">{{ page.heading }}</h1>
           <p>{{ page.tagline }}</p>
           {% if page.youtube == true %}
             <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal"><img src="/img/thumb.jpg" width="150" height=""><i class="fa fa-youtube-play fa-3x"></i></button>
