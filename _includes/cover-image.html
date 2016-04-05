@@ -1,0 +1,25 @@
+<div class="backgroundimg backgroundimg-{{ page.backgroundImg }}">
+  <div class="cover-image-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 text-center">
+          <h1 id="TitleName">{{ page.heading }}</h1>
+          <p>{{ page.tagline }}</p>
+          {% if page.youtube == true %}
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal"><img src="/img/thumb.jpg" width="150" height=""><i class="fa fa-youtube-play fa-3x"></i></button>
+            <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Ja_i6B-JEVk?rel=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backgroundimg-overlay"></div>
+</div>

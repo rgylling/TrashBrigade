@@ -1,0 +1,16 @@
+.cover-image-content {
+  color: #fff;
+}
+
+.cover-image-content .btn {
+  position: relative;
+}
+
+.cover-image-content .btn i {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
