@@ -9,6 +9,15 @@ body {
   font-family: 'Bubblegum Sans', cursive;
 }
 
+.spaces {
+  margin: 30;
+}
+
+.img-responsive {
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
 .navbar-brand {
   padding: 0 15px 0 15px;
 }
