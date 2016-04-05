@@ -1,11 +1,32 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  padding-top: 71px;
+  padding-top: 50px;
 }
 
 .h2, .h3, .h4, .h5, .h6,h2, h3, h4, h5, h6 {
   font-family: 'Bubblegum Sans', cursive;
+}
+
+.spaces {
+  margin: 30;
+}
+
+.img-responsive {
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.navbar-brand {
+  padding: 0 15px 0 15px;
+}
+
+.navbar-header {
+  height:50px;
+}
+
+nav {
+  max-height:50px;
 }
 
 .h1, h1 {
