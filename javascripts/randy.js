@@ -22,7 +22,7 @@ function chng() {
     var imageDir = '../img/kids/';     // change to match images folder
     var imageDir2 = '../img/xmas/';
 
-    var images1 = ['Kids11.jpg', 'Kids12.jpg'];
+    var images1 = ['Kids11.jpg','Kids12.jpg'];
     var images2 = ['Kids13.jpg','Kids16.jpg']
     var images3 = ['Kids07.jpg','Kids09.jpg']
     var images4 = ['Kids10.jpg','Kids14.jpg']
@@ -40,15 +40,9 @@ function chng() {
 
     cnt++;
 
-    var len1 = images1.length;
-    var len2 = images2.length;
-    var len3 = images3.length;
-    var len4 = images4.length;
-    var len5 = images5.length;
-    var len6 = images6.length;
-    var len7 = images7.length;
-    if (cnt < dd) {
 
+    if (cnt < dd) {
+      if (img1){
         img1.src = imageDir + images1[cnt];
         img2.src = imageDir + images2[cnt];
         img3.src = imageDir + images3[cnt];
@@ -56,8 +50,19 @@ function chng() {
         img5.src = imageDir + images5[cnt];
         img6.src = imageDir + images6[cnt];
         img7.src = imageDir + images7[cnt];
+      };
+      if (xmas1){
+        xmas1.src = imageDir2 + xmasOne[cnt];
+        xmas2.src = imageDir2 + xmasTwo[cnt];
+        xmas3.src = imageDir2 + xmasThree[cnt];
+        xmas4.src = imageDir2 + xmasFour[cnt];
+        xmas5.src = imageDir2 + xmasFive[cnt];
+        xmas6.src = imageDir2 + xmasSix[cnt];
+        xmas7.src = imageDir2 + xmasSeven[cnt];
+      };
     }
-    else if (cnt == len1 || cnt == len2 || cnt == len3 || cnt == len4 || cnt == len5 || cnt == len6 || cnt == len7) {
+    else if (cnt == dd) {
+      if (img1){
         img1.src = imageDir + images1[0];
         img2.src = imageDir + images2[0];
         img3.src = imageDir + images3[0];
@@ -65,26 +70,21 @@ function chng() {
         img5.src = imageDir + images5[0];
         img6.src = imageDir + images6[0];
         img7.src = imageDir + images7[0];
+      };
+      if (xmas1){
+        xmas1.src = imageDir2 + xmasOne[0];
+        xmas2.src = imageDir2 + xmasTwo[0];
+        xmas3.src = imageDir2 + xmasThree[0];
+        xmas4.src = imageDir2 + xmasFour[0];
+        xmas5.src = imageDir2 + xmasFive[0];
+        xmas6.src = imageDir2 + xmasSix[0];
+        xmas7.src = imageDir2 + xmasSeven[0];
+      };
         cnt = 0;
       }
 
 }
-/*
-function runIt() {
-    var time = 600;
-    $(".first").fadeIn(time).fadeOut(time, function(){
-        $(".second").fadeIn(time).fadeOut(time, function(){
-            $(".third").fadeIn(time).fadeOut(time, function(){
-                $(".fourth").fadeIn(time).fadeOut(time, runIt);
-            });
-        });
-    });
 
 
-
-};
-runIt();
-
-*/
 
 setInterval(chng, 7000);
