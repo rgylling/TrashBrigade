@@ -1,5 +1,4 @@
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   padding-top: 71px;
@@ -9,7 +8,7 @@ body {
   font-family: 'Bubblegum Sans', cursive;
 }
 
-.h1,h1 {
+.h1, h1 {
   font-family: 'Henny Penny', cursive;
 }
 
@@ -19,11 +18,32 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .backgroundimg-1 {
   background-image: url("https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/1498923_847227371972656_819043631503242694_o.jpg");
-  opacity: .7;
+}
+
+.backgroundimg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  z-index: 0;
+}
+
+.cover-image-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 #TitleName {
