@@ -2,7 +2,7 @@
 
 
     var toyData = {
-    	labels : ["January","February","March","April","May","June"],
+    	labels : ["2010","2011","2012","2013","2014","2015"],
     	datasets : [
     		{
     			fillColor : "rgba(172,194,132,0.4)",
