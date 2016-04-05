@@ -1,3 +1,24 @@
+//CHART ON CHRISTMAS PAGE
+
+
+    var toyData = {
+    	labels : ["January","February","March","April","May","June"],
+    	datasets : [
+    		{
+    			fillColor : "rgba(172,194,132,0.4)",
+    			strokeColor : "#ACC26D",
+    			pointColor : "#fff",
+    			pointStrokeColor : "#9DB86D",
+    			data : [203,156,99,251,305,247]
+    		}
+    	]
+    }
+
+    var toys = document.getElementById('toyChart').getContext('2d');
+        new Chart(toys).Line(toyData);
+
+
+
 var userInput = {};
 
 
