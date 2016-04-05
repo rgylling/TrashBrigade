@@ -9,7 +9,7 @@
     			strokeColor : "#ACC26D",
     			pointColor : "#fff",
     			pointStrokeColor : "#9DB86D",
-    			data : [203,156,99,251,305,247]
+    			data : [160,180,250,290,340,380]
     		}
     	]
     }
