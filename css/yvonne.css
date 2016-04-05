@@ -1,19 +1,20 @@
 .backgroundimg-1 {
-  background-image: url("/img/HomeCover.jpg");
+  background-image: url("/img/covers/HomeCover.jpg");
 }
 
 .backgroundimg-2 {
-  background-image: url("/img/AboutCover.jpg");
+  background-image: url("/img/covers/AboutCover.jpg");
 }
 
 .backgroundimg-3 {
-  background-image: url("/img/ChristmasCover.jpg");
+  background-image: url("/img/covers/ChristmasCover.jpg");
 }
 
 .backgroundimg-4 {
-  background-image: url("/img/GetInvolvedCover.jpg");
+  background-image: url("/img/covers/GetInvolvedCover.jpg");
 }
 
 .backgroundimg-5 {
-  background-image: url("/img/ContactCover.jpg");
+  background-image: url("/img/covers/ContactCover.jpg");
+>>>>>>> 0c78abeae1d4ac818c7e3f9a28bfb27097b7e425
 }
