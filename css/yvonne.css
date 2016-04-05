@@ -16,5 +16,16 @@
 
 .backgroundimg-5 {
   background-image: url("/img/covers/ContactCover.jpg");
->>>>>>> 0c78abeae1d4ac818c7e3f9a28bfb27097b7e425
+}
+
+#nameAlert {
+  visibility: hidden;
+}
+
+#locationAlert {
+  visibility: hidden;
+}
+
+#emailAlert {
+  visibility: hidden;
 }

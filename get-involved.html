@@ -26,18 +26,21 @@ Man braid salvia hammock 8-bit, gastropub church-key williamsburg pabst plaid sh
 <div class="container">
   <div class="row">
     <div class="col-sm-5">
-        <form>
+        <form name="DonationForm">
           <div class="form-group">
             <label for="InputName">Name</label>
-            <input type="text" class="form-control" id="DonationName" placeholder="What's your name?">
+            <input type="text" class="form-control" id="DonationName" placeholder="What's your name?" name="fname">
+            <p id="nameAlert">Name is required!</p>
           </div>
           <div class="form-group">
             <label for="InputLocation">Country</label>
-            <input type="text" class="form-control" id="DonationLocation" placeholder="Where are you from?">
+            <input type="text" class="form-control" id="DonationLocation" placeholder="Where are you from?" name="flocation">
+            <p id="locationAlert">Country is required!</p>
           </div>
           <div class="form-group">
             <label for="InputEmail">E-Mail</label>
-            <input type="text" class="form-control" id="DonationEmail" placeholder="What's your e-mail address?">
+            <input type="text" class="form-control" id="DonationEmail" placeholder="What's your e-mail address?" name="femail">
+            <p id="emailAlert">E-mail is required!</p>
           </div>
           <div class="form-group">
             <label for="InputAmount">Amount</label>
@@ -47,7 +50,7 @@ Man braid salvia hammock 8-bit, gastropub church-key williamsburg pabst plaid sh
             <label for="InputPreference">What would you like your donation to be used for?</label>
             <input type="text" class="form-control" id="DonationPreference" placeholder="Toys, Hot-Dogs, Christmas Toys, Trashbags, Gloves etc.">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button class="btn btn-default" id="SubmitButton">Submit</button>
         </form>
       </div>
     </div>
