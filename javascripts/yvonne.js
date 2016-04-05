@@ -15,7 +15,8 @@ function validateDonationFormName(e) {
     if (userName == null || userName == "") {
         nameAlert.setAttribute('style', 'visibility:visible');
     } else {
-      userInput.name = userName;
+      userInput.nameInput = userName;
+      saveStorage('UserInputName', userInput.nameInput);
     }
     console.log(userInput);
 }
@@ -25,11 +26,12 @@ function validateDonationFormName(e) {
 
 function validateDonationFormLocation(e) {
     e.preventDefault();
-    var userEmail = document.forms["DonationForm"]["flocation"].value;
-    if (userEmail == null || userEmail == "") {
+    var userLocation = document.forms["DonationForm"]["flocation"].value;
+    if (userLocation == null || userLocation == "") {
         locationAlert.setAttribute('style', 'visibility:visible');
     } else {
-      userInput.name = userEmail;
+      userInput.locationInput = userLocation;
+      saveStorage('UserInputLocation', userInput.locationInput);
     }
     console.log(userInput);
 }
@@ -42,3 +44,13 @@ function validateEmail(email) {
 }
 
 //Local Storage
+
+function saveStorage(key, UserData) {
+  var temp = JSON.stringify(UserData);
+  localStorage.setItem(key, temp);
+}
+
+function getStorage(key){
+  var temp = localStorage.getItem(key);
+  return JSON.parse(temp);
+}
