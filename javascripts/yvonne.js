@@ -1,3 +1,10 @@
+// Function to validate the E-Mail input in the DonationForm
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 var userInput = [];
 var DonationForm = document.getElementById("donationForm");
 
@@ -17,12 +24,21 @@ function validateDonationForm(e) {
       var InputValue = el.value;
       var InputID = el.id;
       var ElP = el.nextElementSibling;
-        if (InputID != "SubmitButton") {
+        if (InputID != "SubmitButton") { //don't include the button
           userInput.push(InputValue);
-          if (InputValue == null || InputValue == ""){
+          if (InputValue == null || InputValue == ""){ //checks if something is written in box
             ElP.setAttribute('style', 'visibility:visible');
           } else {
             ElP.setAttribute('style', 'visibility:hidden')
+          }
+          if (InputID == 'DonationEmail') { //checks if something is a valid email
+            var validEmail = validateEmail(InputValue);
+              if (validEmail) { //checks if input is true or false (and email is valid)
+                ElP.setAttribute('style', 'visibility:visible');
+              } else {
+                ElP.setAttribute('style', 'visibility:hidden');
+              }
+
           }
       }
     }
@@ -55,12 +71,7 @@ function validateDonationFormLocation(e) {
     console.log(userInput);
 }
 
-// Function to validate the E-Mail input in the DonationForm
 
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
 
 //Local Storage
 
