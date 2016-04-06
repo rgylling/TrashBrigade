@@ -89,3 +89,28 @@ footer small{
   display: block;
   margin-top: 25px;
 }
+
+#aboutP {
+  margin-left: 80px;
+  text-shadow: 2px 2px 5px grey;
+}
+
+#christmasP {
+  margin-left: 60px;
+  text-shadow: 2px 2px 5px grey;
+}
+
+#getInvolvedP {
+  margin-left: 40px;
+  text-shadow: 2px 2px 5px grey;
+}
+
+#contactP {
+  margin-left: 60px;
+  text-shadow: 2px 2px 5px grey;
+}
+
+.homeHeadlines {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
