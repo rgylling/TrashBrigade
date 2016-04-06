@@ -1,12 +1,12 @@
-.cover-image-content {
+.backgroundimg {
   color: #fff;
 }
 
-.cover-image-content .btn {
+.backgroundimg .btn {
   position: relative;
 }
 
-.cover-image-content .btn i {
+.backgroundimg .btn i {
   position: absolute;
   top: 30px;
   right: 0;
