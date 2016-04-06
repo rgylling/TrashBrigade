@@ -34,7 +34,8 @@ body {
   background-image: url("https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/1498923_847227371972656_819043631503242694_o.jpg");
 }*/
 
-.backgroundimg-overlay {
+.backgroundimg:before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -43,16 +44,6 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, .3);
   z-index: 0;
-}
-
-.cover-image-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
 }
 
 #TitleName {
