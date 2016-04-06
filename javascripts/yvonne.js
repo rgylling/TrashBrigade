@@ -24,19 +24,22 @@ function validateDonationForm(e) {
       var InputValue = el.value;
       var InputID = el.id;
       var ElP = el.nextElementSibling;
-        if (InputID != "SubmitButton") { //don't include the button
+      var checkEmail = false;
+        if (InputID != "SubmitButton" && InputID !=  "DonationAmount" &&  InputID != "DonationPreference") { //don't include the button
           userInput.push(InputValue);
+          console.log(InputValue);
           if (InputValue == null || InputValue == ""){ //checks if something is written in box
             ElP.setAttribute('style', 'visibility:visible');
           } else {
             ElP.setAttribute('style', 'visibility:hidden')
+            checkEmail = true;
           }
-          if (InputID == 'DonationEmail') { //checks if something is a valid email
+          if (checkEmail && InputID == 'DonationEmail') { //checks if something is a valid email
             var validEmail = validateEmail(InputValue);
               if (validEmail) { //checks if input is true or false (and email is valid)
-                ElP.setAttribute('style', 'visibility:visible');
-              } else {
                 ElP.setAttribute('style', 'visibility:hidden');
+              } else {  
+                ElP.setAttribute('style', 'visibility:visible');
               }
 
           }
