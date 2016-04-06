@@ -8,71 +8,6 @@ function validateEmail(email) {
 var userInput = [];
 var DonationForm = document.getElementById("donationForm");
 
-
-//Event Listeners for Submit Button
-
-DonationForm.addEventListener("submit", validateDonationForm);
-
-
-// Function to validate the Name input in the DonationForm
-
-function validateDonationForm(e) {
-    e.preventDefault();
-    console.log(e);
-    for (var i = 0; i < e.target.length; i++) {
-      var el = e.target[i];
-      var InputValue = el.value;
-      var InputID = el.id;
-      var ElP = el.nextElementSibling;
-        if (InputID != "SubmitButton") { //don't include the button
-          userInput.push(InputValue);
-          if (InputValue == null || InputValue == ""){ //checks if something is written in box
-            ElP.setAttribute('style', 'visibility:visible');
-          } else {
-            ElP.setAttribute('style', 'visibility:hidden')
-          }
-          if (InputID == 'DonationEmail') { //checks if something is a valid email
-            var validEmail = validateEmail(InputValue);
-              if (validEmail) { //checks if input is true or false (and email is valid)
-                ElP.setAttribute('style', 'visibility:visible');
-              } else {
-                ElP.setAttribute('style', 'visibility:hidden');
-              }
-
-          }
-      }
-    }
-  }
-
-    console.log(userInput);
-
-    //  var userName = document.forms["DonationForm"]["fname"].value;
-    //  if (userName == null || userName == "") {
-    //      nameAlert.setAttribute('style', 'visibility:visible');
-    //  } else {
-    //    userInput.nameInput = userName;
-    //    saveStorage('UserInputName', userInput.nameInput);
-    //  }
-    //  console.log(userInput);
-//}
-
-
-// Function to validate the Location input in the DonationForm
-
-function validateDonationFormLocation(e) {
-    e.preventDefault();
-    var userLocation = document.forms["DonationForm"]["flocation"].value;
-    if (userLocation == null || userLocation == "") {
-        locationAlert.setAttribute('style', 'visibility:visible');
-    } else {
-      userInput.locationInput = userLocation;
-      saveStorage('UserInputLocation', userInput.locationInput);
-    }
-    console.log(userInput);
-}
-
-
-
 //Local Storage
 
 function saveStorage(key, UserData) {
@@ -83,4 +18,60 @@ function saveStorage(key, UserData) {
 function getStorage(key){
   var temp = localStorage.getItem(key);
   return JSON.parse(temp);
+}
+
+var DonationFormStorage = getStorage('DonationsForm');
+
+//Event Listeners for Submit Button
+
+DonationForm.addEventListener("submit", validateDonationForm);
+DonationForm.addEventListener("keyup", storeFormValues);
+
+
+// Function to validate the Name input in the DonationForm
+
+function validateDonationForm(e) {
+    e.preventDefault();
+    for (var i = 0; i < e.target.length; i++) {
+      var el = e.target[i];
+      var InputValue = el.value;
+      var InputID = el.id;
+      var ElP = el.nextElementSibling;
+      var checkEmail = false;
+        if (InputID != "SubmitButton" && InputID !=  "DonationAmount" &&  InputID != "DonationPreference") { //don't include the button
+          userInput.push(InputValue);
+          console.log(InputValue);
+          if (InputValue == null || InputValue == ""){ //checks if something is written in box
+            ElP.setAttribute('style', 'visibility:visible');
+          } else {
+            ElP.setAttribute('style', 'visibility:hidden')
+            checkEmail = true;
+          }
+          if (checkEmail && InputID == 'DonationEmail') { //checks if something is a valid email
+            var validEmail = validateEmail(InputValue);
+              if (validEmail) { //checks if input is true or false (and email is valid)
+                ElP.setAttribute('style', 'visibility:hidden');
+              } else {
+                ElP.setAttribute('style', 'visibility:visible');
+              }
+          }
+      }
+    }
+  }
+
+//Local Storage
+
+function storeFormValues (e) {
+  console.log(e);
+  var elForm = e.target.form;
+  var localStorageArray = [];
+  for (var i = 0; i < elForm.length; i++) {
+    var el = elForm[i];
+    var InputValue = el.value;
+    var InputID = el.id;
+    if (InputID != "SubmitButton" && InputID !=  "DonationAmount" &&  InputID != "DonationPreference"){
+      localStorageArray.push(InputValue);
+    }
+  }
+  saveStorage('DonationsForm', localStorageArray);
 }
