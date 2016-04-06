@@ -1,6 +1,6 @@
-var userInput = {};
+var userInput = [];
 var DonationForm = document.getElementById("donationForm");
-console.log("hi");
+
 
 //Event Listeners for Submit Button
 
@@ -12,14 +12,24 @@ DonationForm.addEventListener("submit", validateDonationForm);
 function validateDonationForm(e) {
     e.preventDefault();
     console.log(e);
-    // var userName = document.forms["DonationForm"]["fname"].value;
-    // if (userName == null || userName == "") {
-    //     nameAlert.setAttribute('style', 'visibility:visible');
-    // } else {
-    //   userInput.nameInput = userName;
-    //   saveStorage('UserInputName', userInput.nameInput);
-    // }
-    // console.log(userInput);
+    for (var i = 0; i < e.target.length; i++) {
+      var InputValue = e.target[i].value;
+      var InputID = e.target[i].id;
+        if (InputID != "SubmitButton") {
+      userInput.push(InputValue);
+    }
+    }
+
+    console.log(userInput);
+
+    //  var userName = document.forms["DonationForm"]["fname"].value;
+    //  if (userName == null || userName == "") {
+    //      nameAlert.setAttribute('style', 'visibility:visible');
+    //  } else {
+    //    userInput.nameInput = userName;
+    //    saveStorage('UserInputName', userInput.nameInput);
+    //  }
+    //  console.log(userInput);
 }
 
 
