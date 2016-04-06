@@ -62,3 +62,20 @@
   padding: 25px 10px;
   font-size: 16px;
 }
+
+.navbar-nav > li > a.btn-default {
+  padding: 10px;
+  margin-top: 13px;
+}
+
+.backgroundimg .btn {
+  margin-top: 35px;
+}
+
+.backgroundimg .btn img {
+  width: 250px;
+}
+
+.backgroundimg  p {
+  font-size: 20px;
+}
