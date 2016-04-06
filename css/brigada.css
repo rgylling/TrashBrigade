@@ -31,12 +31,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+    -webkit-filter: grayscale(100%)contrast(.9)
 }
 
 /*.backgroundimg-1 {
   background-image: url("https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/1498923_847227371972656_819043631503242694_o.jpg");
 }*/
-
+/*
 .backgroundimg:before {
   content: '';
   position: absolute;
@@ -48,6 +50,7 @@ body {
   background-color: rgba(0, 0, 0, .3);
   z-index: 0;
 }
+*/
 
 #TitleName {
   font-size: 4em;
