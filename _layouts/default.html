@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body class="{{ page.bodyClass }}">
     {% include header.html %}
     {% include cover-image.html %}
     <main>
@@ -12,8 +12,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script src="{{ "/javascripts/brigada.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/javascripts/yvonne.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/javascripts/randy.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/javascripts/johnny.js" | prepend: site.baseurl }}"></script>
+    {% if bodyClass == 'getInvolvedPage' %}
+      <script src="{{ "/javascripts/yvonne.js" | prepend: site.baseurl }}"></script>
+    {% endif %}
+    {% if bodyClass == 'aboutPage' or bodyClass == 'christmasPage' %}
+      <script src="{{ "/javascripts/randy.js" | prepend: site.baseurl }}"></script>
+    {% endif %}
+    {% if bodyClass == 'contactPage' %}
+      <script src="{{ "/javascripts/johnny.js" | prepend: site.baseurl }}"></script>
+    {% endif %}
   </body>
 </html>
