@@ -80,6 +80,10 @@
   font-size: 20px;
 }
 
+footer {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
 
 footer .list-inline {
   margin-top: 20px;
@@ -90,27 +94,11 @@ footer small{
   margin-top: 25px;
 }
 
-#aboutP {
-  margin-left: 80px;
-  text-shadow: 2px 2px 5px grey;
+.homeHeadlines h2 {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px grey;
 }
 
-#christmasP {
-  margin-left: 60px;
-  text-shadow: 2px 2px 5px grey;
-}
-
-#getInvolvedP {
-  margin-left: 40px;
-  text-shadow: 2px 2px 5px grey;
-}
-
-#contactP {
-  margin-left: 60px;
-  text-shadow: 2px 2px 5px grey;
-}
-
-.homeHeadlines {
-  margin-top: 50px;
-  margin-bottom: 80px;
+.homeCol {
+  margin: 50px 0;
 }
