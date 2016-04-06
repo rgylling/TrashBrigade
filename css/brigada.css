@@ -1,7 +1,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  padding-top: 51px;
+  padding-top: 71px;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -19,6 +19,7 @@ body {
 
 .navbar-brand {
   font-family: 'Henny Penny', cursive;
+  font-size: 24px;
 }
 
 .backgroundimg {

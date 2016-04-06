@@ -29,3 +29,31 @@
 #emailAlert {
   visibility: hidden;
 }
+
+.red {
+  color: #e42218;
+}
+
+.yellow {
+  color: #dbdb01;
+}
+
+.green {
+  color: #00b848;
+}
+
+.purple {
+  color: #422a74;
+}
+
+.orange {
+  color: #f68b00;
+}
+
+.blue {
+  color: #01a9da;
+}
+
+.navbar {
+  min-height: 70px;
+}
