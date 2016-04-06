@@ -66,6 +66,10 @@ body {
   margin-top: 100px;
 }
 
+.margin-t--10 {
+  margin-top: 10px;
+}
+
 .margin-t--80 {
   margin-top: 80px;
 }
