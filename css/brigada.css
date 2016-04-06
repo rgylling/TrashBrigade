@@ -20,6 +20,8 @@ body {
 .navbar-brand {
   font-family: 'Henny Penny', cursive;
   font-size: 24px;
+  height: 70px;
+  padding: 25px 15px;
 }
 
 .backgroundimg {

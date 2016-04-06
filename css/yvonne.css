@@ -57,3 +57,8 @@
 .navbar {
   min-height: 70px;
 }
+
+.navbar-nav > li > a {
+  padding: 25px 10px;
+  font-size: 16px;
+}
