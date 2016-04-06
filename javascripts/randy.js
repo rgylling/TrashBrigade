@@ -2,8 +2,8 @@ var dd = 3;
 var cnt = -1;
 function chng() {
 
-  $(".fadeThis").fadeTo(10,0);
-  $(".fadeThis").fadeTo(2000,1);
+    $(".fadeThis").fadeTo(10,0);
+    $(".fadeThis").fadeTo(2000,1);
     var img1 = document.getElementById('imgone');  // match image ID
     var img2 = document.getElementById('imgtwo');
     var img3 = document.getElementById('imgthree');
