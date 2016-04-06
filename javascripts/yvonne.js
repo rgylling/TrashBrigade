@@ -8,17 +8,30 @@ function validateEmail(email) {
 var userInput = [];
 var DonationForm = document.getElementById("donationForm");
 
+//Local Storage
+
+function saveStorage(key, UserData) {
+  var temp = JSON.stringify(UserData);
+  localStorage.setItem(key, temp);
+}
+
+function getStorage(key){
+  var temp = localStorage.getItem(key);
+  return JSON.parse(temp);
+}
+
+var DonationFormStorage = getStorage('DonationsForm');
 
 //Event Listeners for Submit Button
 
 DonationForm.addEventListener("submit", validateDonationForm);
+DonationForm.addEventListener("keyup", storeFormValues);
 
 
 // Function to validate the Name input in the DonationForm
 
 function validateDonationForm(e) {
     e.preventDefault();
-    console.log(e);
     for (var i = 0; i < e.target.length; i++) {
       var el = e.target[i];
       var InputValue = el.value;
@@ -38,52 +51,27 @@ function validateDonationForm(e) {
             var validEmail = validateEmail(InputValue);
               if (validEmail) { //checks if input is true or false (and email is valid)
                 ElP.setAttribute('style', 'visibility:hidden');
-              } else {  
+              } else {
                 ElP.setAttribute('style', 'visibility:visible');
               }
-
           }
       }
     }
   }
 
-    console.log(userInput);
-
-    //  var userName = document.forms["DonationForm"]["fname"].value;
-    //  if (userName == null || userName == "") {
-    //      nameAlert.setAttribute('style', 'visibility:visible');
-    //  } else {
-    //    userInput.nameInput = userName;
-    //    saveStorage('UserInputName', userInput.nameInput);
-    //  }
-    //  console.log(userInput);
-//}
-
-
-// Function to validate the Location input in the DonationForm
-
-function validateDonationFormLocation(e) {
-    e.preventDefault();
-    var userLocation = document.forms["DonationForm"]["flocation"].value;
-    if (userLocation == null || userLocation == "") {
-        locationAlert.setAttribute('style', 'visibility:visible');
-    } else {
-      userInput.locationInput = userLocation;
-      saveStorage('UserInputLocation', userInput.locationInput);
-    }
-    console.log(userInput);
-}
-
-
-
 //Local Storage
 
-function saveStorage(key, UserData) {
-  var temp = JSON.stringify(UserData);
-  localStorage.setItem(key, temp);
-}
-
-function getStorage(key){
-  var temp = localStorage.getItem(key);
-  return JSON.parse(temp);
+function storeFormValues (e) {
+  console.log(e);
+  var elForm = e.target.form;
+  var localStorageArray = [];
+  for (var i = 0; i < elForm.length; i++) {
+    var el = elForm[i];
+    var InputValue = el.value;
+    var InputID = el.id;
+    if (InputID != "SubmitButton" && InputID !=  "DonationAmount" &&  InputID != "DonationPreference"){
+      localStorageArray.push(InputValue);
+    }
+  }
+  saveStorage('DonationsForm', localStorageArray);
 }
