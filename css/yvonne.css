@@ -3,11 +3,11 @@
 }
 
 .backgroundimg-2:before {
-  background-image: url("/img/covers/AboutCover.jpg");
+  background-image: url("/img/covers/HomeCover.jpg");
 }
 
 .backgroundimg-3:before {
-  background-image: url("/img/covers/HomeCover.jpg");
+  background-image: url("/img/covers/AboutCover.jpg");
 }
 
 .backgroundimg-4:before {
