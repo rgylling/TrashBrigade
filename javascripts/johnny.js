@@ -31,25 +31,34 @@ function checkRequired(value) {
   return false;
 }
 
-function onClick(event) {
+function onSubmit(event) {
   event.preventDefault();
 
-  for (var i = 0; i < event.target.length; i++) {
-    var elInput = event.srcElement[i];
-    var id = elInput.id;
-    var value = elInput.value.trim();
-    var elP = elInput.nextElementSibling;
+  var elForm = event.target;
+  var formUrl = elForm.action;
+  var formType = elForm.method;
+  var formData = {};
 
-    if (elInput.name != 'submit') {
-      var validationPass = checkRequired(value);
+  for (var i = 0; i < elForm.length; i++) {
+    var elInput = elForm[i];
+    var inputName = elInput.name;
+
+    if (inputName != 'submit') {
+      var inputId = elInput.id;
+      var inputValue = elInput.value.trim();
+      var elP = elInput.nextElementSibling;
+
+      formData[inputName] = inputValue;
+
+      var validationPass = checkRequired(inputValue);
 
       if (validationPass == false) {
-        elP.textContent = messages[id]['required'];
+        elP.textContent = messages[inputId].required;
       }
 
-      if (id == 'inputEmail' && validationPass == true) {
-        validationPass = checkEmail(value);
-        elP.textContent = messages[id]['valid'];
+      if (inputId == 'inputEmail' && validationPass == true) {
+        validationPass = checkEmail(inputValue);
+        elP.textContent = messages[inputId].valid;
       }
 
       if (validationPass == true) {
@@ -59,6 +68,11 @@ function onClick(event) {
       }
     }
   }
+
+  console.log(formData);
+  // if (form validation success) {
+    postForm(formUrl, formData, formType, 'xml');
+  // }
 }
 
 function onKeyUp(event) {
@@ -78,6 +92,23 @@ function onKeyUp(event) {
 
   var contactFormStr = JSON.stringify(contactFormArr);
   localStorage.setItem('contactForm', contactFormStr);
+}
+
+function postForm(formUrl, formData, formType, formDataType) {
+  $.ajax({
+    url: formUrl,
+    data: formData,
+    type: formType,
+    dataType: formDataType,
+    statusCode: {
+      0: function () {
+        // Success message
+      },
+      200: function () {
+        // Success Message
+      }
+    }
+  });
 }
 
 function repopulateFormInputs() {
@@ -100,4 +131,4 @@ repopulateFormInputs();
 var elForm = document.getElementById('formContact');
 
 elForm.addEventListener('keyup', onKeyUp);
-elForm.addEventListener('submit', onClick);
+elForm.addEventListener('submit', onSubmit);
