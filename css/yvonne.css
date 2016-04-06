@@ -79,3 +79,13 @@
 .backgroundimg  p {
   font-size: 20px;
 }
+
+
+footer .list-inline {
+  margin-top: 20px;
+}
+
+footer small{
+  display: block;
+  margin-top: 25px;
+}
