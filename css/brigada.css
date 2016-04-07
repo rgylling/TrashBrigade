@@ -95,6 +95,10 @@ body {
   margin-top: 80px;
 }
 
+.margin-b--60 {
+  margin-bottom: 60px;
+}
+
 .margin-b--100 {
   margin-bottom: 100px;
 }
@@ -106,6 +110,10 @@ body {
 
 .inputPayPal {
   margin: 0 auto;
+}
+
+.googleMapsIframe {
+  margin-top: 60px;
 }
 
 /*
@@ -142,6 +150,10 @@ body {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  .googleMapsIframe {
+    margin-top: 0;
   }
 }
 
