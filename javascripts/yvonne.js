@@ -11,11 +11,31 @@ var DonationForm = document.getElementById("donationForm");
 //Function to clear form after valid input
 
 function ClearFields (validateArray){
-  if (validateArray.indexOf(false) < 0){
-    DonationForm.reset();
-    localStorage.removeItem('DonationsForm');
+  if (validateArray.indexOf(false) < 0){ //makes sure input is valid
+    DonationForm.reset(); // clears form
+    localStorage.removeItem('DonationsForm'); // clears local storage
+    var div = document.createElement("div"); // build DOM tree and new elements
+    div.setAttribute("role", "alert");
+    div.className = "alert alert-success alert-dismissible";
+    var button = document.createElement("button");
+    button.setAttribute("type", "button");
+    button.setAttribute("data-dismiss", "alert");
+    button.setAttribute("aria-label", "Close");
+    button.className = "close";
+    var span = document.createElement("span");
+    span.setAttribute("aria-hidden", "true");
+    span.innerHTML = "&times;";
+    var spanText = document.createElement("span");
+    spanText.textContent = "Thank you for your comment. You rock!"
+    button.appendChild(span);
+    div.appendChild(button);
+    div.appendChild(spanText);
+    var parent = DonationForm.parentNode;
+    parent.insertBefore(div, DonationForm);
+
+    }
   }
-}
+
 
 
 //Local Storage
