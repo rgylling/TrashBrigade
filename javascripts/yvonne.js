@@ -20,7 +20,7 @@ function getStorage(key){
   return JSON.parse(temp);
 }
 
-var DonationFormStorage = getStorage('DonationsForm');
+
 
 //Event Listeners for Submit Button
 
@@ -70,8 +70,25 @@ function storeFormValues (e) {
     var InputValue = el.value;
     var InputID = el.id;
     if (InputID != "SubmitButton" && InputID !=  "DonationAmount" &&  InputID != "DonationPreference"){
-      localStorageArray.push(InputValue);
+      var InputObject = {};
+      InputObject.InputValue = InputValue;
+      InputObject.InputID = InputID;
+      localStorageArray.push(InputObject);
     }
   }
   saveStorage('DonationsForm', localStorageArray);
 }
+
+function populateForm (){ //puts saved data into form
+  var DonationFormStorage = getStorage('DonationsForm');
+  if (DonationFormStorage !== null) { //if there's something inside storage use it populate form
+    for (var i = 0; i < DonationFormStorage.length; i++) {
+      var inputId = DonationFormStorage[i].InputID;
+      var inputValue = DonationFormStorage[i].InputValue;
+      var elInput = document.getElementById(inputId);
+      elInput.value = inputValue;
+    }
+  }
+}
+
+populateForm();
