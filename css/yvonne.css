@@ -55,20 +55,6 @@
   color: #01a9da;
 }
 
-.navbar {
-  min-height: 70px;
-}
-
-.navbar-nav > li > a {
-  padding: 25px 10px;
-  font-size: 16px;
-}
-
-.navbar-nav > li > form {
-  padding: 10px;
-  margin-top: 13px;
-}
-
 .backgroundimg .btn {
   margin-top: 35px;
 }

@@ -13,19 +13,41 @@ body {
   font-size: 4em;
   margin-top: 60px;
   text-shadow: 2px 2px 2px grey;
-  color: #000;
 }
 
 .spaces {
   margin: 30;
 }
 
+.navbar-toggle {
+  margin-right: 5px;
+}
+
+.navbar-toggle .fa {
+  font-size: 20px;
+  padding: 6px;
+}
+
 .navbar-brand {
   font-family: 'Henny Penny', cursive;
   font-size: 24px;
   height: 70px;
-  padding: 25px 15px;
+  padding: 25px 5px;
   text-shadow: 2px 2px 5px black;
+}
+
+.navbar {
+  min-height: 70px;
+}
+
+.navbar-nav > li > a {
+  padding: 25px 5px;
+  font-size: 16px;
+}
+
+.navbar-nav > li > form {
+  padding: 10px 5px;
+  margin-top: 13px;
 }
 
 .backgroundimg {
@@ -53,11 +75,6 @@ body {
   border-bottom: 1px solid	#ddd;
 }
 
-.navbar .btn {
-  border-color: #f68b00;
-  color: #f68b00;
-}
-
 .textBlockGetInvolved {
   margin-top: 100px;
 }
@@ -82,8 +99,13 @@ body {
   margin-bottom: 100px;
 }
 
-.nav>li>a:focus, .nav>li>a:hover{
-  background-color:inherit;
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: inherit;
+}
+
+.inputPayPal {
+  margin: 0 auto;
 }
 
 /*
@@ -92,23 +114,35 @@ body {
 @media (min-width: 1200px) {}
 */
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  .navbar-brand {
+    padding: 25px 10px;
+  }
+
+  .navbar-nav > li > a {
+    padding: 25px 10px;
+  }
+
+  .navbar-nav > li > form {
+    padding: 10px 10px;
+  }
+
   .navbar-nav {
     margin-right: 5px;
   }
-}
 
-li:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
+  li:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 
-a:focus, a:hover {
-  text-decoration:none;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  a:focus, a:hover {
+    text-decoration:none;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 .cursiveme {
