@@ -9,8 +9,24 @@ bodyClass: homePage
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 paragraphs1 text-justify">
-      <p class="text-center cursiveme"> "Help us keep our barrio clean" </p>
+    <div class="col-sm-8 col-sm-offset-2 text-justify">
+      <h1 class="text-center">{{ page.heading }}</h1>
+      <p class="text-center cursiveme">"Help us keep our barrio clean"</p>
+      {% if page.youtube == true %}
+        <button type="button" class="btn btn-link btn-youtube center-block" data-toggle="modal" data-target="#myModal">
+          <img class="img-responsive" src="/img/thumb.jpg" width="400" height="250">
+          <i class="fa fa-youtube-play fa-4x"></i>
+       </button>
+        <div class="modal modal--youtube" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Ja_i6B-JEVk?rel=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
       <p class="text-center">La Brigada de la Basura is a local neighborhood charity based in Puerto Vallarta, Mexico. Founded in 2010 by expats Michael and Yvonne Hayes it strives to raise awareness for the environement with the local children, keep the neighborhood clean of trash and thereby boost hygene and diminish the threat of the Dengue virus as well as promote inter cultural understanding between the local residents and the expat community.
       </p>
     </div>
@@ -20,7 +36,7 @@ bodyClass: homePage
 
 
 
-<div class="container margin-t--80 margin-b--100">
+<div class="container margin-t--30 margin-b--100">
   <div class="row homeHeadlines ">
     <div class="homeCol col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0">
       <h2 class="text-center"><a class="orange" href="/about.html">About</a></h2>

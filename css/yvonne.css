@@ -1,5 +1,6 @@
 .backgroundimg-1:before {
   background-image: url("/img/covers/ChristmasCover.jpg");
+  background-position: bottom;
 }
 
 .backgroundimg-2:before {

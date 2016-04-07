@@ -2,13 +2,14 @@
   color: #fff;
 }
 
-.backgroundimg .btn {
+.btn-youtube {
   position: relative;
+  margin-bottom: 50px;
 }
 
-.backgroundimg .btn .fa {
+.btn-youtube .fa {
   position: absolute;
-  top: 50px;
+  top: 103px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -17,7 +18,6 @@
 }
 
 .container--contact {
-  margin-top: 100px;
   margin-bottom: 100px;
 }
 

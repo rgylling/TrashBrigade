@@ -5,19 +5,19 @@ body {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', serif;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px black;
+  font-family: 'Lora', serif;
   color: #f68b00;
+}
+
+.h1, h1 {
+  font-size: 4em;
+  margin-top: 60px;
+  text-shadow: 2px 2px 2px grey;
+  color: #000;
 }
 
 .spaces {
   margin: 30;
-}
-
-.img-responsive {
-  margin-bottom: 30px;
-  max-width: 100%;
 }
 
 .navbar-brand {
@@ -29,7 +29,7 @@ body {
 }
 
 .backgroundimg {
-  height: 400px;
+  height: 350px;
   position: relative;
 }
 
@@ -48,12 +48,6 @@ body {
   -webkit-filter: grayscale(100%) contrast(.9);
 }
 
-#TitleName {
-  font-size: 4em;
-  color: #fff;
-}
-
-
 .navbar {
   background-color: #fff;
   border-bottom: 1px solid	#ddd;
@@ -70,6 +64,14 @@ body {
 
 .margin-t--10 {
   margin-top: 10px;
+}
+
+.margin-t--30 {
+  margin-top: 30px;
+}
+
+.margin-t--40 {
+  margin-top: 40px;
 }
 
 .margin-t--80 {
@@ -110,9 +112,8 @@ a:focus, a:hover {
 }
 
 .cursiveme {
-  font-family: cursive;
-  font-size: 34px;
+  /*font-family: cursive;*/
+  font-size: 1.75em;
   color: #f68b00;
-  margin-bottom: 50px;
-  margin-top: -50px;
+  margin-bottom: 20px;
 }
