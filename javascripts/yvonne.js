@@ -8,6 +8,15 @@ function validateEmail(email) {
 var userInput = [];
 var DonationForm = document.getElementById("donationForm");
 
+//Function to clear form after valid input
+
+function ClearFields (validateArray){
+  if (validateArray.indexOf(false) < 0){
+    DonationForm.reset();
+  }
+}
+
+
 //Local Storage
 
 function saveStorage(key, UserData) {
@@ -32,6 +41,7 @@ DonationForm.addEventListener("keyup", storeFormValues);
 
 function validateDonationForm(e) {
     e.preventDefault();
+    var validateArray = [];
     for (var i = 0; i < e.target.length; i++) {
       var el = e.target[i];
       var InputValue = el.value;
@@ -43,21 +53,27 @@ function validateDonationForm(e) {
           console.log(InputValue);
           if (InputValue == null || InputValue == ""){ //checks if something is written in box
             ElP.setAttribute('style', 'visibility:visible');
+            validateArray.push(false);
           } else {
             ElP.setAttribute('style', 'visibility:hidden')
             checkEmail = true;
+            validateArray.push(true);
           }
           if (checkEmail && InputID == 'DonationEmail') { //checks if something is a valid email
             var validEmail = validateEmail(InputValue);
               if (validEmail) { //checks if input is true or false (and email is valid)
                 ElP.setAttribute('style', 'visibility:hidden');
+                validateArray.push(true);
               } else {
                 ElP.setAttribute('style', 'visibility:visible');
+                validateArray.push(false);
               }
           }
       }
     }
+    ClearFields(validateArray); //clearing fields after valid input
   }
+
 
 //Local Storage
 
