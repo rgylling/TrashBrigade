@@ -18,6 +18,8 @@ A user would want to use our website to combine their vacation or retirement in 
 
 ## Diagrams
 
+![Drawing of Animals](/_diagrams/animals.jpg "Drawing of Animals")
+
 ![Domain model of contact form and photo gallery](/_diagrams/domain-model-01.jpg "Domain Model of Contact Form and Photo Gallery")
 
 ![Domain model of donation form](/_diagrams/domain-model-02.jpg "Domain Model of Donation Form")
