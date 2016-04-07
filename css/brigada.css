@@ -19,6 +19,15 @@ body {
   margin: 30;
 }
 
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse {
+  max-height: none;
+}
+
+.navbar-collapse {
+  border-top: 1px solid #ddd;
+}
+
 .navbar-toggle {
   margin-right: 5px;
 }
@@ -37,17 +46,13 @@ body {
 }
 
 .navbar {
+  background-color: #fff;
+  border-bottom: 1px solid	#ddd;
   min-height: 70px;
 }
 
-.navbar-nav > li > a {
-  padding: 25px 5px;
-  font-size: 16px;
-}
-
 .navbar-nav > li > form {
-  padding: 10px 5px;
-  margin-top: 13px;
+  margin-left: 15px;
 }
 
 .backgroundimg {
@@ -68,11 +73,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%) contrast(.9);
-}
-
-.navbar {
-  background-color: #fff;
-  border-bottom: 1px solid	#ddd;
 }
 
 .textBlockGetInvolved {
@@ -121,6 +121,18 @@ body {
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
 */
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding: 25px 5px;
+    font-size: 16px;
+  }
+
+  .navbar-nav > li > form {
+    padding: 10px 5px;
+    margin-top: 13px;
+  }
+}
 
 @media (min-width: 992px) {
   .navbar-brand {
