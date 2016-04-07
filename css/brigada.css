@@ -53,8 +53,10 @@ body {
   color: #fff;
 }
 
+
 .navbar {
-  background-color: #F2F2F1;
+  background-color: #fff;
+  border-bottom: 1px solid	#ddd;
 }
 
 .navbar .btn {
@@ -88,4 +90,10 @@ body {
   .navbar-nav {
     margin-right: 5px;
   }
+}
+
+li:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
