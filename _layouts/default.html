@@ -11,15 +11,8 @@
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-    <script src="{{ "/javascripts/brigada.js" | prepend: site.baseurl }}"></script>
-    {% if page.bodyClass == 'getInvolvedPage' %}
-      <script src="{{ "/javascripts/yvonne.js" | prepend: site.baseurl }}"></script>
-    {% endif %}
-    {% if page.bodyClass == 'aboutPage' or page.bodyClass == 'christmasPage' %}
-      <script src="{{ "/javascripts/randy.js" | prepend: site.baseurl }}"></script>
-    {% endif %}
-    {% if page.bodyClass == 'contactPage' %}
-      <script src="{{ "/javascripts/johnny.js" | prepend: site.baseurl }}"></script>
-    {% endif %}
+    {% for src in page.js %}
+      <script src="{{ src }}"></script>
+    {% endfor %}
   </body>
 </html>
