@@ -109,5 +109,4 @@ function chng() {
 }
 
 
-
 setInterval(chng, 7000);
