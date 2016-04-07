@@ -80,6 +80,10 @@ body {
   margin-bottom: 100px;
 }
 
+.nav>li>a:focus, .nav>li>a:hover{
+  background-color:inherit;
+}
+
 /*
 @media (min-width: 768px) {}
 @media (min-width: 992px) {}
@@ -96,4 +100,19 @@ li:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+a:focus, a:hover {
+  text-decoration:none;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cursiveme {
+  font-family: cursive;
+  font-size: 34px;
+  color: #f68b00;
+  margin-bottom: 50px;
+  margin-top: -50px;
 }
