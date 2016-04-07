@@ -38,6 +38,7 @@ function onSubmit(event) {
   var formUrl = elForm.action;
   var formType = elForm.method;
   var formData = {};
+  var validationArr = [];
 
   for (var i = 0; i < elForm.length; i++) {
     var elInput = elForm[i];
@@ -51,6 +52,7 @@ function onSubmit(event) {
       formData[inputName] = inputValue;
 
       var validationPass = checkRequired(inputValue);
+      validationArr.push(validationPass);
 
       if (validationPass == false) {
         elP.textContent = messages[inputId].required;
@@ -58,6 +60,7 @@ function onSubmit(event) {
 
       if (inputId == 'inputEmail' && validationPass == true) {
         validationPass = checkEmail(inputValue);
+        validationArr.push(validationPass);
         elP.textContent = messages[inputId].valid;
       }
 
@@ -69,10 +72,10 @@ function onSubmit(event) {
     }
   }
 
-  console.log(formData);
-  // if (form validation success) {
+  // Form validation pass, no false value(s) in array
+  if (validationArr.indexOf(false) < 0) {
     postForm(formUrl, formData, formType, 'xml');
-  // }
+  }
 }
 
 function onKeyUp(event) {
@@ -101,14 +104,38 @@ function postForm(formUrl, formData, formType, formDataType) {
     type: formType,
     dataType: formDataType,
     statusCode: {
-      0: function () {
-        // Success message
-      },
-      200: function () {
-        // Success Message
-      }
+      200: postFormSuccess()
     }
   });
+}
+
+function postFormSuccess() {
+  var parentDiv = elForm.parentNode;
+
+  var elDivAlert = document.createElement('div');
+  elDivAlert.className = 'alert alert-success alert-dismissible';
+  elDivAlert.setAttribute('role', 'alert');
+
+  var elButtonClose = document.createElement('button');
+  elButtonClose.className = 'close';
+  elButtonClose.setAttribute('type', 'button');
+  elButtonClose.setAttribute('data-dismiss', 'alert');
+  elButtonClose.setAttribute('aria-label', 'Close');
+
+  var elSpanClose = document.createElement('span');
+  elSpanClose.setAttribute('aria-hidden', 'true');
+  elSpanClose.innerHTML = '&times;';
+
+  var elSpanAlert = document.createElement('span');
+  elSpanAlert.textContent = 'Thank you! Your message has been successfully sent. We will contact you very soon!';
+
+  parentDiv.insertBefore(elDivAlert, elForm);
+  elDivAlert.appendChild(elButtonClose);
+  elButtonClose.appendChild(elSpanClose);
+  elDivAlert.appendChild(elSpanAlert);
+
+  elForm.reset();
+  localStorage.removeItem('contactForm');
 }
 
 function repopulateFormInputs() {
