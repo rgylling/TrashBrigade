@@ -13,6 +13,7 @@ var DonationForm = document.getElementById("donationForm");
 function ClearFields (validateArray){
   if (validateArray.indexOf(false) < 0){
     DonationForm.reset();
+    localStorage.removeItem('DonationsForm');
   }
 }
 
