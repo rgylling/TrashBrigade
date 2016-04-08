@@ -1,21 +1,29 @@
-// Function to validate the E-Mail input in the DonationForm
+//*************************************************//
+//               VARIABLES                        //
+//************************************************//
 
+//Global Variables
+var userInput = [];
+var DonationForm = document.getElementById("donationForm");
+
+
+//*************************************************//
+//               FUNCTIONS                        //
+//************************************************//
+
+// Function to validate the E-Mail input in the DonationForm - regular expression found on web
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
 
-var userInput = [];
-var DonationForm = document.getElementById("donationForm");
-
 //Function to clear form after valid input
-
 function ClearFields (validateArray, formData){
   if (validateArray.indexOf(false) < 0){ //makes sure input is valid
     var formUrl = DonationForm.action;
     var formType = DonationForm.method;
 
-    $.ajax({
+    $.ajax({         //google forms
       url: formUrl,
       data: formData,
       type: formType,
@@ -24,7 +32,7 @@ function ClearFields (validateArray, formData){
         0: function () {
           DonationForm.reset(); // clears form
           localStorage.removeItem('DonationsForm'); // clears local storage
-          var div = document.createElement("div"); // build DOM tree and new elements
+          var div = document.createElement("div"); // build DOM tree and new elements for message box
           div.setAttribute("role", "alert");
           div.className = "alert alert-success alert-dismissible";
           var button = document.createElement("button");
@@ -36,7 +44,7 @@ function ClearFields (validateArray, formData){
           span.setAttribute("aria-hidden", "true");
           span.innerHTML = "&times;";
           var spanText = document.createElement("span");
-          spanText.textContent = "Thank you for your comment. You rock!";
+          spanText.textContent = "Thank you for your donation! We appreciate your help";
           button.appendChild(span);
           div.appendChild(button);
           div.appendChild(spanText);
@@ -47,28 +55,6 @@ function ClearFields (validateArray, formData){
     });
   }
 }
-
-
-
-//Local Storage
-
-function saveStorage(key, UserData) {
-  var temp = JSON.stringify(UserData);
-  localStorage.setItem(key, temp);
-}
-
-function getStorage(key){
-  var temp = localStorage.getItem(key);
-  return JSON.parse(temp);
-}
-
-
-
-//Event Listeners for Submit Button
-
-DonationForm.addEventListener("submit", validateDonationForm);
-DonationForm.addEventListener("keyup", storeFormValues);
-
 
 // Function to validate the Name input in the DonationForm
 
@@ -111,7 +97,23 @@ function validateDonationForm(e) {
   }
 
 
-//Local Storage
+  //*************************************************//
+  //          FUNCTIONS FOR LOCAL STORAGE            //
+  //************************************************//
+
+//Local Storage Basics - get it and save it
+
+function saveStorage(key, UserData) {
+  var temp = JSON.stringify(UserData);
+  localStorage.setItem(key, temp);
+}
+
+function getStorage(key){
+  var temp = localStorage.getItem(key);
+  return JSON.parse(temp);
+}
+
+//Function to store Info
 
 function storeFormValues (e) {
   console.log(e);
@@ -129,6 +131,8 @@ function storeFormValues (e) {
   saveStorage('DonationsForm', localStorageArray);
 }
 
+//Function to populate the Form if Local Storage exists
+
 function populateForm (){ //puts saved data into form
   var DonationFormStorage = getStorage('DonationsForm');
   if (DonationFormStorage !== null) { //if there's something inside storage use it populate form
@@ -142,3 +146,12 @@ function populateForm (){ //puts saved data into form
 }
 
 populateForm();
+
+//*************************************************//
+//         EVENT LISTENERS                        //
+//************************************************//
+
+//Event Listeners for Submit Button
+
+DonationForm.addEventListener("submit", validateDonationForm);
+DonationForm.addEventListener("keyup", storeFormValues);
