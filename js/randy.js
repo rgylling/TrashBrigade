@@ -36,8 +36,8 @@ function chng() {
     var xmas6 = document.getElementById('xmassix');
     var xmas7 = document.getElementById('xmasseven');
 
-    var imageDir = '../img/kids/';       // change to match images folder
-    var imageDir2 = '../img/xmas/';
+    var imageDir = 'img/kids/';       // change to match images folder
+    var imageDir2 = 'img/xmas/';
 
 
               /*----------------------------
