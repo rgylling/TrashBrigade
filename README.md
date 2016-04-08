@@ -1,4 +1,4 @@
-# Trash Brigade
+# [Trash Brigade](https://yvonnehayes.github.io/TrashBrigade)
 
 <b>Team Name</b>: The Trashies
 
@@ -7,6 +7,14 @@
 The purpose of this project is to create a website for a charity that supports local children in Puerto Vallarta, Mexico.
 
 A user would want to use our website to combine their vacation or retirement in Puerto Vallarta with giving back to the community. They would benefit by making a positive difference in the lives of the children they support. The user would visit our website because currently the charity doesn't have a website.
+
+The purpose of the video in our website is to gain insight and introduce La Brigada de la Basura (The Trash Brigade) to the user.
+
+## Quick-start
+
+1. Clone the repo: `git clone https://github.com/YvonneHayes/TrashBrigade.git`.
+2. Install [Jekyll](https://jekyllrb.com): `gem install jekyll`.
+3. Run [Jekyll](https://jekyllrb.com): `jekyll serve`.
 
 ## Stories
 
@@ -40,4 +48,5 @@ A user would want to use our website to combine their vacation or retirement in 
 
 ## Links
 
+- [Website](https://yvonnehayes.github.io/TrashBrigade)
 - [Trello](https://trello.com/b/E8SHU905/trash-brigade)
