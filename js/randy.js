@@ -89,3 +89,16 @@ function chng() {
 
 
 setInterval(chng, 7000);
+
+
+/*
+var myObj = {
+  mike:
+  hello:
+
+
+
+
+
+}
+*/
