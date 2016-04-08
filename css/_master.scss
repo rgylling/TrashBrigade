@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Open Sans', sans-serif;
   padding-top: 71px;
@@ -109,18 +108,30 @@ body {
 }
 
 .inputPayPal {
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
 }
 
 .googleMapsIframe {
   margin-top: 60px;
 }
 
-/*
-@media (min-width: 768px) {}
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {}
-*/
+.cursiveme {
+  font-family:sans-serif;
+  font-weight:200;
+  font-size: 1.75em;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.boxMe {
+  -webkit-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
+}
+
+#donationForm p {
+  color:red;
+}
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {
@@ -169,20 +180,4 @@ body {
   }
 }
 
-.cursiveme {
-  font-family:sans-serif;
-  font-weight:200;
-  font-size: 1.75em;
-  color: #000;
-  margin-bottom: 20px;
-}
-
-.boxMe {
-  -webkit-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
-}
-
-#donationForm p {
-  color:red;
-}
+// @media (min-width: 1200px) {}
