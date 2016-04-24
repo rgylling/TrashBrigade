@@ -2,7 +2,7 @@
 
 <b>Team Name</b>: The Trashies
 
-<b>Team Members</b>: [Yvonne Hayes](https://github.com/YvonneHayes), [Randy Gylling](https://github.com/rgylling), [Johnny Luangphasy](https://github.com/jluangphasy)
+<b>Team Members</b>: [Yvonne Hayes](https://github.com/YvonneHayes), [Randy Gylling](https://github.com/rgylling), [Johnny Luangphasy](https://github.com/jluangphasy).
 
 The purpose of this project is to create a website for a charity that supports local children in Puerto Vallarta, Mexico.
 
