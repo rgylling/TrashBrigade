@@ -1,6 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  padding-top: 71px;
+  font-family: 'Raleway', sans-serif;
   font-size:16px;
   line-height:2;
 }
@@ -13,6 +12,7 @@ body {
 .h1, h1 {
   font-size: 4em;
   margin-top: 60px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .spaces {
@@ -45,8 +45,7 @@ body {
 }
 
 .navbar {
-  background-color: #fff;
-  border-bottom: 1px solid	#ddd;
+  background-color: transparent;
   min-height: 70px;
 }
 
@@ -55,7 +54,7 @@ body {
 }
 
 .backgroundimg {
-  height: 500px;
+  height: 600px;
   position: relative;
 }
 
@@ -71,7 +70,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: grayscale(100%) contrast(.9);
+  -webkit-filter: grayscale(100%) contrast(.9) brightness(.5);
 }
 
 .textBlockGetInvolved {
