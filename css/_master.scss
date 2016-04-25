@@ -3,6 +3,9 @@ body {
   font-size:16px;
   line-height:2;
 }
+a{
+  color:white;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
@@ -13,6 +16,7 @@ body {
   font-size: 4em;
   margin-top: 60px;
   font-family: 'Raleway', sans-serif;
+  font-weight:800;
 }
 
 .spaces {
@@ -54,13 +58,14 @@ body {
 }
 
 .backgroundimg {
-  height: 600px;
+  height: 700px;
   position: relative;
 }
 
 .backgroundimg:before {
   content: '';
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
