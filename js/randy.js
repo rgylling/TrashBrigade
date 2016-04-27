@@ -1,4 +1,3 @@
-
 var dd = 3;           // variable based off of how many images
 var cnt = -1;         // variable counting through the index
 

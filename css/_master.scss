@@ -5,15 +5,25 @@ body {
 }
 a{
   color:white;
+  font-weight:200;
+  letter-spacing:2px;
+}
+
+.headercenter {
+  margin-top:300px;
+}
+
+.headercontainer {
+  width:100%;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
-  color: #f68b00;
+  color: white;;
 }
 
 .h1, h1 {
-  font-size: 4em;
+  font-size: 5em;
   margin-top: 60px;
   font-family: 'Raleway', sans-serif;
   font-weight:800;
@@ -42,7 +52,7 @@ a{
 }
 
 .navbar-brand {
-  font-family: 'Henny Penny', cursive;
+  font-family: 'Raleway', sans-serif;
   font-size: 24px;
   height: 70px;
   padding: 25px 5px;
@@ -58,7 +68,7 @@ a{
 }
 
 .backgroundimg {
-  height: 700px;
+  height: 1000px;
   position: relative;
 }
 
@@ -123,8 +133,8 @@ a{
   font-family:sans-serif;
   font-weight:200;
   font-size: 1.75em;
-  color: #000;
-  margin-bottom: 20px;
+  color: #f68b00;
+  margin-left:0px;
 }
 
 .boxMe {
