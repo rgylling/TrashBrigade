@@ -6,10 +6,12 @@ jQuery(document).ready(function($) {
 
     if (scrollPos > 930) {
       navbar.css('background-color','orange');
-      $('.navscroll').css({'color' : 'black', 'font-weight': 'bold'})
+      $('.navscroll').css({'color' : 'black', 'font-weight': '400'})
+      $('.navbar-brand').text('The Trash Brigade');
     } else {
       navbar.css('background-color','transparent');
       $('.navscroll').css({'color': 'white', 'font-weight':'200'})
+      $('.navbar-brand').text("");
     }
   });
 });
