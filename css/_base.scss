@@ -1,0 +1,26 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size:16px;
+  line-height:2;
+}
+
+a{
+  color:white;
+  font-weight:200;
+  letter-spacing:2px;
+}
+
+footer {
+  border-top: 3px solid black;
+  padding: 20px 0;
+
+}
+
+footer .list-inline {
+  margin-top: 20px;
+}
+
+footer small{
+  display: block;
+  margin-top: 20px;
+}

@@ -1,0 +1,217 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  color: white;;
+}
+
+.h1, h1 {
+  font-size: 5em;
+  margin-top: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:800;
+}
+
+.navbar-toggle .fa {
+  font-size: 20px;
+  padding: 6px;
+}
+
+.navbar-brand {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  height: 70px;
+  padding: 25px 5px;
+}
+
+.navbar {
+  background-color: transparent;
+  min-height: 70px;
+}
+
+.navbar-nav > li > form {
+  margin-left: 15px;
+}
+
+.backgroundimg {
+  height: 1000px;
+  position: relative;
+}
+
+.backgroundimg:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%) contrast(.9) brightness(.5);
+}
+
+.cursiveme {
+  font-family:sans-serif;
+  font-weight:200;
+  font-size: 1.75em;
+  color: #f68b00;
+  margin-left:0px;
+}
+
+.boxMe {
+  -webkit-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.75);
+}
+
+.backgroundimg .btn {
+  margin-top: 35px;
+}
+
+.backgroundimg .btn img {
+  width: 250px;
+}
+
+.backgroundimg  p {
+  font-size: 20px;
+}
+
+.homeHeadlines h2 {
+  margin-bottom: 20px;
+}
+
+.homeCol {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+.backgroundimg-1:before {
+  background-image: url("../img/covers/ChristmasCover.jpg");
+  background-position: bottom;
+}
+
+.backgroundimg-2:before {
+  background-image: url("../img/covers/HomeCover.jpg");
+}
+
+.backgroundimg-3:before {
+  background-image: url("../img/covers/AboutCover.jpg");
+}
+
+.backgroundimg-4:before {
+  background-image: url("../img/covers/GetInvolvedCover.jpg");
+}
+
+.backgroundimg-5:before {
+  background-image: url("../img/covers/ContactCover.jpg");
+}
+
+.fadeThis {
+  margin: 0 auto 30px auto;
+  -webkit-filter:  grayscale(50%) contrast(.9) ;
+  -webkit-box-shadow: 0px 13px 23px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 13px 23px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 13px 23px -4px rgba(0,0,0,0.75);
+}
+
+.gallery1 {
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.btn-youtube {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.btn-youtube .fa {
+  position: absolute;
+  margin-top: -29px;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #d62423;
+  text-shadow: 0 0 5px #000;
+}
+
+li:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+a:focus, a:hover {
+  text-decoration:none;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: inherit;
+}
+
+.inputPayPal {
+  margin: 50px auto 0 auto;
+}
+
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse {
+  max-height: none;
+}
+
+#donationForm p {
+  color:red;
+}
+
+#toyChart {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+#formContact p {
+  margin-top: 5px;
+  color: #e42218;
+}
+
+@media (min-width: 768px) {
+  .homeCol {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding: 25px 5px;
+    font-size: 16px;
+  }
+
+  .navbar-nav > li > form {
+    padding: 10px 5px;
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    padding: 25px 10px;
+  }
+
+  .navbar-nav > li > a {
+    padding: 25px 10px;
+  }
+
+  .navbar-nav > li > form {
+    padding: 10px 10px;
+  }
+
+  .navbar-nav {
+    margin-right: 5px;
+  }
