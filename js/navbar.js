@@ -4,14 +4,14 @@ jQuery(document).ready(function($) {
     var scrollPos = $(window).scrollTop(),
       navbar = $('.navbar');
 
-    if (scrollPos > 930) {
-      navbar.css('background-color','orange');
-      $('.navscroll').css({'color' : 'black', 'font-weight': '400'})
+    if (scrollPos > 730) {
+      navbar.css('background-color','#f2f2f2');
+      $('.navscroll').css({'color' : 'black', 'font-weight': '200'});
       $('.navbar-brand').text('The Trash Brigade');
     } else {
       navbar.css('background-color','transparent');
-      $('.navscroll').css({'color': 'white', 'font-weight':'200'})
-      $('.navbar-brand').text("");
+      $('.navscroll').css({'color': 'white', 'font-weight':'200'});
+      $('.navbar-brand').text('');
     }
   });
 });
