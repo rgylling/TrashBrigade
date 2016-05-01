@@ -1,13 +1,26 @@
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lora', serif;
-  color: white;;
+  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform:uppercase;
+  color:#42dca3;
 }
 
 .h1, h1 {
   font-size: 5em;
-  font-family: 'Raleway', sans-serif;
-  font-weight:800;
+  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:700;
+  color:white;
 }
+
+.sub-head {
+  font-size:2em;
+  color:#42dca3;
+}
+
+.sub-para {
+  font-size:1.3em;
+}
+
+
 
 .navbar-toggle .fa {
   font-size: 20px;
@@ -15,7 +28,6 @@
 }
 
 .navbar-brand {
-  font-family: 'Raleway', sans-serif;
   font-size: 24px;
   height: 70px;
   padding: 25px 5px;
@@ -44,18 +56,13 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%) contrast(.9) brightness(.5);
-}
-
-.cursiveme {
-  font-family:sans-serif;
-  font-weight:200;
-  font-size: 1.75em;
-  color: #f68b00;
-  margin-left:0px;
+  -webkit-box-shadow: inset 0px -200px 300px -118px rgba(0,0,0,0.9);
+  -moz-box-shadow: inset 0px -200px 300px -118px rgba(0,0,0,0.9);
+  box-shadow: inset 0px -250px 500px -50px #000;
 }
 
 .backgroundimg .btn {
@@ -66,9 +73,6 @@
   width: 250px;
 }
 
-.backgroundimg  p {
-  font-size: 20px;
-}
 
 .homeHeadlines h2 {
   margin-bottom: 20px;
@@ -200,6 +204,7 @@ a:focus, a:hover {
 
   .navbar-nav > li > a {
     padding: 25px 10px;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   }
 
   .navbar-nav > li > form {
