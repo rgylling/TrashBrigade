@@ -190,7 +190,17 @@ a:focus, a:hover {
   color: #e42218;
 }
 
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size:2.5em;
+  }
+}
+
+
 @media (min-width: 768px) {
+
   .homeCol {
     margin-top: 50px;
     margin-bottom: 50px;
