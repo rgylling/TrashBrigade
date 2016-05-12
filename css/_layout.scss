@@ -11,7 +11,7 @@
   color:white;
 }
 
-.sub-head {
+.sub-head, .slogan {
   font-size:2em;
   color:#42dca3;
 }
@@ -42,8 +42,16 @@
   margin-left: 15px;
 }
 
+.tb-border{
+  border-top:solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
 .backgroundimg {
-  height: 1000px;
+  height: 800px;
   position: relative;
 }
 
@@ -56,13 +64,17 @@
   right: 0;
   width: 100%;
   height: 100%;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(100%) contrast(.9) brightness(.5);
-  -webkit-box-shadow: inset 0px -200px 300px -118px rgba(0,0,0,0.9);
-  -moz-box-shadow: inset 0px -200px 300px -118px rgba(0,0,0,0.9);
-  box-shadow: inset 0px -250px 500px -50px #000;
+  // -webkit-box-shadow: inset 0px -200px 300px -118px rgba(0,0,0,0.9);
+  // -moz-box-shadow: inset 0px -200px 300px -118px rgba(0,0,0,0.9);
+  // box-shadow: inset 0px -250px 500px -50px #000;
+}
+
+.grayimg {
+  -webkit-filter: grayscale(100%) contrast(.9) brightness(.8);
 }
 
 .backgroundimg .btn {
@@ -123,7 +135,6 @@
 
 .btn-youtube {
   position: relative;
-  margin-bottom: 50px;
 }
 
 .btn-youtube .fa {
